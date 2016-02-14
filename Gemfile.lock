@@ -163,9 +163,9 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
-    scss-lint (0.38.0)
-      rainbow (~> 2.0)
-      sass (~> 3.4.1)
+    scss_lint (0.44.0)
+      rake (~> 10.0)
+      sass (~> 3.4.15)
     spring (1.6.3)
     sprockets (3.5.2)
       concurrent-ruby (~> 1.0)
@@ -192,6 +192,9 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    unicorn-rails (2.2.0)
+      rack
+      unicorn
     web-console (3.1.1)
       activemodel (>= 4.2)
       debug_inspector
@@ -217,11 +220,11 @@ DEPENDENCIES
   rspec-rails
   rubocop
   sass-rails
-  scss-lint
+  scss_lint
   spring
   turbolinks
   uglifier
-  unicorn
+  unicorn-rails
   web-console
 
 BUNDLED WITH

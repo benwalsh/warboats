@@ -15,7 +15,7 @@ group :development do
   gem 'capistrano-rails'
   gem 'cheat'
   gem 'rubocop'
-  gem 'scss-lint'
+  gem 'scss_lint', require: false
   gem 'spring'
   gem 'web-console'
 end
@@ -34,4 +34,4 @@ gem 'mysql2'
 gem 'sass-rails'
 gem 'turbolinks'
 gem 'uglifier'
-gem 'unicorn'
+gem 'unicorn-rails'

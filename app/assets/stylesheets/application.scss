@@ -66,36 +66,36 @@ table {
       border-width: 3px;
     }
 
-    &:before {
+    &::before {
       margin: auto;
     }
 
     &[data-boat="flier_holder"] {
-      &:before {
+      &::before {
         content: 'F';
       }
     }
 
     &[data-boat="war_boat"] {
-      &:before {
+      &::before {
         content: 'W';
       }
     }
 
     &[data-boat="underwater_boat"] {
-      &:before {
+      &::before {
         content: 'U';
       }
     }
 
     &[data-boat="damager"] {
-      &:before {
+      &::before {
         content: 'D';
       }
     }
 
     &[data-boat="wanderer"] {
-      &:before {
+      &::before {
         content: 'w';
       }
     }
