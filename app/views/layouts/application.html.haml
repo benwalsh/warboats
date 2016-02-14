@@ -1,0 +1,8 @@
+!!!
+%html
+  %head
+    %title= @title || t(:title)
+    = stylesheet_link_tag("application", media: "all", data: { turbolinks_track: true })
+    - %w(jquery-2.2.0.min class application).each do |script|
+      = javascript_include_tag(script, data: { turbolinks_track: true })
+  %body= yield

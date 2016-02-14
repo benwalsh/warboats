@@ -1,0 +1,5 @@
+%header
+  %h1= t(:welcome)
+  .text
+%main{ data: { board_size: Board::SIZE, cpu_board_id: @cpu_board.id, player_board_id: @player_board.id, boats: Boat::MODELS.to_json } }
+%footer= t(:footer, year: Time.zone.now.strftime("%Y"))

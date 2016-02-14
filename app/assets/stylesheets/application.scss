@@ -1,0 +1,120 @@
+@import 'reset';
+
+$black: #000;
+$blue: #00f;
+$green: #0f0;
+$grey: #808080;
+$red: #f00;
+
+* {
+  font-family: Verdana;
+  line-height: 1.4;
+}
+
+body {
+  margin: 20px;
+}
+
+header {
+  h1 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .text {
+    color: $grey;
+  }
+}
+
+table {
+  border-collapse: collapse;
+
+  &[data-name="player"] {
+    float: left;
+  }
+
+  &[data-name="cpu"] {
+    float: right;
+  }
+
+  tr td {
+    border: solid 1px $black;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    width: 40px;
+
+    &:hover {
+      background: $grey;
+      cursor: pointer;
+    }
+
+    &.miss {
+      background: $blue;
+    }
+
+    &.possible {
+      background: $green;
+      cursor: pointer;
+    }
+
+    &.hit {
+      background: $red;
+    }
+
+    &.occupied {
+      border-width: 3px;
+    }
+
+    &:before {
+      margin: auto;
+    }
+
+    &[data-boat="flier_holder"] {
+      &:before {
+        content: 'F';
+      }
+    }
+
+    &[data-boat="war_boat"] {
+      &:before {
+        content: 'W';
+      }
+    }
+
+    &[data-boat="underwater_boat"] {
+      &:before {
+        content: 'U';
+      }
+    }
+
+    &[data-boat="damager"] {
+      &:before {
+        content: 'D';
+      }
+    }
+
+    &[data-boat="wanderer"] {
+      &:before {
+        content: 'w';
+      }
+    }
+  }
+
+  &.inactive tr td:hover {
+    background: none;
+    cursor: default;
+  }
+
+  &.gameover {
+    opacity: .2;
+  }
+}
+
+footer {
+  clear: both;
+  font-style: italic;
+  font-weight: 300;
+  margin-top: 20px;
+  text-align: right;
+}

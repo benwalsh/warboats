@@ -1,0 +1,36 @@
+AllCops:
+  TargetRubyVersion: 2.3
+
+Documentation:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockNesting:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 200
+
+Metrics/MethodLength:
+  CountComments: false
+  Max: 140
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/ParameterLists:
+  Max: 11
+  CountKeywordArgs: true
+
+Metrics/PerceivedComplexity:
+  Max: 47
+
+Metrics/CyclomaticComplexity:
+  Max: 46
+
+
