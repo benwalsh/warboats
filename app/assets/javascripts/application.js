@@ -48,7 +48,7 @@
 
   var CpuFire = function() {
     $Boards['cpu'].addClass('inactive').find('td').off('click');
-    var $target = $Boards['player'].find('td:not(.fired)').random();
+    var $target = FindTarget();
     $target.addClass('fired');
     if ($target.hasClass('occupied')) {
       var boat = GetBoat('player', $target.data('boat'));
@@ -70,6 +70,11 @@
         Boats['cpu'].push(new Boat(key, boats[key], 'owner'));
       }
     }
+  };
+
+  var FindTarget = function() {
+    return $Boards['player'].find('td:not(.fired)').random();
+    // TODO - change difficulty by removing a proportion of $('td:not(.occupied)') from the collection before Randomizing.
   };
 
   var GameOver = function() {
@@ -158,8 +163,9 @@
         CurrentBoat.y = $el.data('y');
         $.each(CurrentBoat.possibleEndCoords(), function(_i, coordinates) {
           $GetCells(coordinates).filter(':not(.occupied)').addClass('possible');
+          // TODO: filter these to not mark invalid cells (with boats in between) as possible
         });
-        $('td').on('click', function() {
+        $('td.possible').on('click', function() {
           PlaceBoatEnd($(this));
         });
       } else {
