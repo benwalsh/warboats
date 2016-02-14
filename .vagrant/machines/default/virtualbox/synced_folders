@@ -1,1 +1,0 @@
-{"nfs":{"/vagrant":{"type":"nfs","guestpath":"/vagrant","hostpath":"/Users/benwalsh/warboats","disabled":false,"__vagrantfile":true,"map_uid":501,"map_gid":20,"nfs_udp":true,"nfs_version":3,"uuid":"746849734"}},"virtualbox":{"/hosthome":{"guestpath":"/hosthome","hostpath":"/Users/benwalsh","disabled":false,"__vagrantfile":true}}}
